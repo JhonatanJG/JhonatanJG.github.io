@@ -1,0 +1,280 @@
+:root {
+  --Azul: #010038;
+  --verde-hover: 158, 35%, 37%;
+  --AzulC: #293A80;
+
+  --dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  --clrs-400: hsl(228, 12%, 48%);
+
+  --ff-title: "Fraunces", serif;
+  --ff-body: "Montserrat", sans-serif;
+
+  --fs-300: 0.75rem;
+  --fs-400: 0.875rem;
+  --fs-500: 1.2rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+
+  --fw-400: 400;
+  --fw-700: 700;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.primary-header {
+  font-family: var(--ff-title);
+  font-size: var(--fs-700);
+  font-weight: var(--fw-700);
+}
+.secondary-header {
+  font-family: var(--ff-title);
+  font-size: var(--fs-600);
+  font-weight: var(--fw-700);
+}
+
+.tiny-text {
+  font-size: var(--fs-300);
+}
+.upper {
+  text-transform: uppercase;
+}
+body {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-400);
+  font-family: var(--ff-body);
+  margin-block: 0;
+  background-color: var(--Cream);
+}
+.container {
+  width: 950px;
+  margin-inline: auto;
+}
+.profile-picture {
+  width: 200px;
+  aspect-ratio: 1;
+}
+.header-flex {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
+  padding: 1em;
+}
+.primary-nav ul {
+  display: flex;
+
+  justify-content: space-around;
+}
+
+.primary-nav li {
+  padding: 1em;
+}
+
+.primary-nav a::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  border-bottom: 2px solid var(--White);
+  transform: scale(0, 1);
+  transition: transform linear .2s;
+}
+.primary-nav a:hover::before {
+  transform: scale(1, 1);
+  right: 0;
+}
+
+.primary-nav a {
+  text-decoration: none;
+  color: currentColor;
+  position: relative;
+}
+header {
+  background-color: var(--Azul);
+  color: var(--White);
+  border: 2px  solid  black;
+}
+main {
+  --flow: 2em;
+  background-color: var(--AzulC);
+  padding: 2em;
+  border: 2px solid black;
+  color: var(--White);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 75% auto;
+  gap: 1.3em;
+}
+
+/* Margin top a los hijos (ecluye al primero) */
+.flow > * + * {
+  margin-top: var(--flow);
+
+}
+.flow-small > * + * {
+  --flow: 0.7em;
+  margin-top: var(--flow);
+}
+footer {
+  background-color: var(--Azul);
+  text-align: center;
+  padding: 2em;
+  color: var(--White);
+  border: 2px solid black;
+}
+.redes-sociales {
+  display: grid;
+  gap: 0.9em;
+  margin-top: 1em;
+  margin-inline: auto;
+  width: max-content;
+}
+
+.redes-sociales * {
+  width: 35px;
+}
+aside {
+  padding-top: 16px;
+  text-align: center;
+  border: 5px dotted var(--Azul);
+}
+.list-perfil {
+  padding-left: 1em;
+}
+
+input,
+textarea{
+  display: block;
+  margin-bottom: 1em;
+  border: 2px solid #c2c2c2fa;
+  border-radius: 8px;
+  padding-inline: .3em;
+  
+}
+
+input:focus-visible,
+textarea:focus-within{
+
+  outline: 2px solid var(--Azul);
+}
+
+textarea{
+  resize: vertical;
+  width: 100%;
+}
+
+
+form{
+  width: fit-content;
+  margin-inline: auto;
+}
+
+button{
+  width: 100%;
+  margin-inline: auto;
+  display: block;
+  background-color: var(--Azul);
+  border: none;
+  border-radius: 8px;
+  padding: .5em;
+  color: var(--White);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-500);
+  transition: background-color .2s;
+}
+
+button:hover{
+  background-color: hsla(var(--Cream), .5);
+  
+}
+
+.formCifrado{
+  width: 800px;
+}
+
+.alfabeto p{
+  overflow-wrap: break-word;
+  
+}
+.gridimage{
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  align-items: center;
+
+  > img{
+    width: 250px;
+    justify-self: center;
+    border-radius: 50%;
+  }
+}
+
+

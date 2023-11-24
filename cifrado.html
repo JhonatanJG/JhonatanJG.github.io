@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiPaginaWEB JH</title>
+    <link rel="icon" type="image/jpeg" href="imagenes/michi.jpeg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="container">
+      <div class="header-flex">
+        <img class="profile-picture" src="imagenes/michi.jpeg" alt="" />
+        <div class="Datos">
+          <p class="primary-header upper">jhonatan stiven camacho</p>
+          <div class="tiny-text upper">
+            <p>estudiante universitario</p>
+            <p>edad: 17 años</p>
+            <p>celular: +573188114770</p>
+            <p>direccion: cr4# 8 -08 chia, cundinamarca</p>
+          </div>
+        </div>
+      </div>
+      <nav class="primary-nav">
+        <ul role="list">
+          <li>
+            <a href="index.html"
+              >HomePage</a
+            >
+          </li>
+
+          <li>
+            
+            <a href="glosario.html">Glosario</a>
+         
+          </li>
+
+          <li><a href="contact.html">Formulario</a></li>
+          <li><a href="cifrado.html">Cifrado</a></li  >
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+        <h1>Cifrado del CESAR con clave</h1>
+
+    <h2>Parametros de Encripcion</h2>
+    <article class="flow">
+      <form name="FormularioCiframiento" class="formCifrado">
+          <label for="Rotacion">Rotacion alfabeto:</label>
+          <input type="text" name="Rotacion" id="Rotacion">
+      
+          <input type="checkbox" name="Usar_Clave" id="Usar_Clave" checked="checked" >
+          <label for="Usar_Clave">Activar uso de clave</label>
+      
+          <label for="Clave">Clave: </label>
+          <input type="text" name="Clave" id="Clave">
+      
+          <label for="Desplazamiento_Clave">Desplazamiento_Clave: </label>
+          <input type="text" name="Desplazamiento_Clave" id="Desplazamiento_Clave">
+      
+          <h2>Texto a Procesar:</h2>
+          <label style='display: inline;'>Ingrese mensaje original</label>
+      
+          <textarea rows='4' cols='70' id="Texto_Origen" name="Texto_Origen" placeholder="copie aqu� el texto de su mensaje (m�ximo 1000 caracteres)" ></textarea>
+      
+      
+          <button type="button" onclick='Cifrado()' >Cifrar</button>&nbsp; &nbsp; &nbsp;
+          <button type="button" onclick='Descifrado()' >Descifrar</button>
+      
+      
+          <div class="alfabeto flow">
+              <p id="Alfabeto_Origen" >Alfabeto Origen :  </p>
+              <p id="Alfabeto_Cifrado">Alfabeto Cifrado:  </p>
+          </div>
+      
+          <label for="Resultado" style='display: inline;'>Texto convertido:</label>
+          <div id="Resultado" style='width: 520px; border: 1px solid #2255aa; padding: 5;'>
+              <p id="Texto_Cifrado">&nbsp;</p>
+          </div>
+      </form>
+    </article>
+     
+    </main>
+    <footer class="container">
+      <p>Copy Right 2023 - UCS</p>
+    </footer>
+    <script src="Scrit.js"></script>
+  </body>
+
+</html>
